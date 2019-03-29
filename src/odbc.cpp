@@ -422,6 +422,8 @@ Handle<Value> ODBC::GetColumnValue( SQLHSTMT hStmt, Column column,
         //return Null();
       }
       else {
+	/* DISABLE LOCAL TIME CONVERSION */
+	/*
         if (strptime((char *) buffer, "%Y-%m-%d %H:%M:%S", &timeInfo)) {
           //a negative value means that mktime() should use timezone information
           //and system databases to attempt to determine whether DST is in effect
@@ -434,6 +436,8 @@ Handle<Value> ODBC::GetColumnValue( SQLHSTMT hStmt, Column column,
         else {
           return scope.Escape(Nan::New((char *)buffer).ToLocalChecked());
         }
+	*/
+	return scope.Escape(Nan::New((char *)buffer).ToLocalChecked());
       }
 #else
       struct tm timeInfo = { 
