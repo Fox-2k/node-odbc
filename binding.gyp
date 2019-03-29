@@ -14,7 +14,8 @@
         "<!(node -e \"require('nan')\")"
       ],
       'defines' : [
-        'UNICODE'
+        'UNICODE',
+        'TIMEGM'
       ],
       'conditions' : [
         [ 'OS == "linux"', {
