@@ -1,3 +1,7 @@
+Forked from wankdanker/node-odbc
+--------------------------------
+Local time conversion is disabled in this fork. (win32 & linux)
+
 node-odbc
 ---------
 
